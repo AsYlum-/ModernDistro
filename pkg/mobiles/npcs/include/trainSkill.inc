@@ -1,4 +1,5 @@
 include ":npcs:skillLists";
+include "include/string";
 
 var cost;
 
@@ -116,6 +117,7 @@ function TrainSkill(me, who, item)
 			CreateItemInContainer( who.backpack, 0xEED, excess_gold );
 			gold_received := gold_received - excess_gold;
 		endif
+		attribute_name := RemoveSpaces(attribute_name, CLR_ALL_SPACES);
 		SetAttributeBaseValue( who, attribute_name, gold_received );
 		PrintTextAbovePrivate(me, "Let me show you how it's done.", who);
 		DoRecalcVitals(who);
