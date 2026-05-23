@@ -313,7 +313,7 @@ function RemoveSpaces(text, flags:=CLR_LEADING_SPACES)
 	var pre := flags & CLR_LEADING_SPACES;
 	var post := flags & CLR_TRAILING_SPACES;
 	var dbl := flags & CLR_DOUBLE_SPACES;
-	var all := flags & CLR_ALL_SPACES;
+		var all := flags & CLR_ALL_SPACES;
 
 	if ( all )
 		while ( text[" "] )
